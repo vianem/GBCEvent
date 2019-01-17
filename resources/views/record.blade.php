@@ -18,9 +18,14 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
 
-                    <div>
+                   <div>
 
-               {{-- <form action="/update/{{$event->id}}" method="post">  --}}
+                        <!-- <form action="/update/" method="post"> -->
+
+                   <!--  Subscription for current event is sent from here:-->
+
+                   <!--  <form method="post" action="/subscribe/{{$event->id}}" >-->
+
                         <br /><h3>&nbsp&nbsp&nbsp {{$event->eventName}}</h3><br />
 
                         <label> Location& room </label>&nbsp&nbsp&nbsp
@@ -36,18 +41,23 @@
                         <label> Event Description</label>
                         <input type="text" name="eventDescription" value="{{$event->eventDescription}}" readonly><br /><br>
 
+                        <label> # Participants</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 
+                        <!-- Taking count of users, registered for an event here: -->
+                        <input type="text" name="eventDescription" value="{{$event->users()->count()}}" readonly><br /><br>
+
+                        {{csrf_field()}}
                         <a href="/home"><button>Cancel</button></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <button>Sign Up</button>
-                {{--   <input type="submit" name="SignUp" value="Sign Up"> --}}
+                    <!-- <a href="/subscribe/{{$event->id}}"><button>Sign Up</button></a>-->
+                        <!-- <input type="submit" name="Submit" value="Sign Up">-->
+                      </form>
+                     </div>
 
-                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>   <hr>
 
- </div>
-</div>
-</div>
-</div>   <hr>
-</div>
 
 
 

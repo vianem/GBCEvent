@@ -28,7 +28,9 @@
                                         <td></td>
                                         <td>{{$event->eventName}}</td>
                                         <td>
-
+                                            <a href="/editrec/{{$event->id}}">Edit</a>
+                                            |
+                                            <a href="/delete/{{$event->id}}">Delete</a>
                                         </td>
                                     </tr>
                             </table>
