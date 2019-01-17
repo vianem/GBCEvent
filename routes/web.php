@@ -22,11 +22,14 @@ Route::get('/viewrec/{id}', 'EventController@viewrec');
 Route::get('/editrec/{id}', 'EventController@editrec');
 Route::post('/update/{id}', 'EventController@update');
 Route::get('/delete/{id}', 'EventController@delete');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/subscribe/{id}', 'EventController@subscribe');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
