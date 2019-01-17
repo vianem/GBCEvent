@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
+
     public function callcreate(Request $request)
     {
       return view('createnew'); // passing the $message to record view
@@ -23,6 +24,9 @@ class EventController extends Controller
         $event->maxNumParticipants = $request->maxNumParticipants;
         $event->eventDescription = $request->eventDescription;
         $event->save();
+
+
+
         return redirect('/home');
     }
 
@@ -57,4 +61,18 @@ class EventController extends Controller
         $event->delete();
         return redirect("/home");
     }
+    public function subscribe($id)
+   {
+      $event = Event::find($id);
+       //$user = User::find(Auth::id());
+       //$event->users()->sync($user);
+
+
+     //  $id = Auth::user()->id;
+       // $user = Auth::user();
+       //$user = auth()->user();
+
+
+       return view('record', ['event' => $event]); // passing the $message to record view
+  }
 }
