@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>GBCEvents</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -83,17 +83,10 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <div class="panel panel-default">
-
-
-
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-8 col-md-offset-2">
-                                                    <div class="panel panel-default">
 
-
-
-                                                    </div>
                                                     <div class="panel-heading"><h2>Upcoming events:</h2></div><hr><br/>
                                                     <div class="panel-body">
                                                         @if (session('status'))

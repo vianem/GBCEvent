@@ -4,11 +4,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-
-
-
-                </div>
                     <div class="panel-heading"><h2>Upcoming events:</h2></div>
                     <div class="panel-body">
                             @if (session('status'))
@@ -36,9 +31,12 @@
                             </table>
                               <br>
                           @endforeach
-                        {{ $events->links() }}
+                                <div class="col-md-6 offset-4"> {{ $events->links() }} </div>
                     </div>
-               </div><a href="/callcreate"><button>Create New Event</button></a>
+               </div>
+            <div class="">
+                <a href="/callcreate" ><button class="btn btn-success">Create New Event</button></a>
+            </div>
         </div>
         </div>
     </div>
